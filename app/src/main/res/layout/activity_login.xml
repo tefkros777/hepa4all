@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/duskBlue"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".LoginActivity">
@@ -27,7 +27,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center"
             android:text="@string/login_prompt"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/dustyBlue"
             android:textSize="22sp" />
 
         <!---Email editText-->
@@ -57,7 +57,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/sunset"
             android:onClick="login"
             android:text="@string/login" />
 
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
-            android:backgroundTint="@color/colorAccent2"
+            android:backgroundTint="@color/sunrise"
             android:onClick="guestLogin"
             android:text="@string/guest_login" />
 
@@ -111,6 +111,6 @@
         android:layout_marginBottom="24dp"
         android:layout_weight="8"
         android:src="@drawable/ic_hepa4all_logo_monochrome"
-        android:tint="@color/colorSecondary" />
+        android:tint="@color/dawnBlue" />
 
 </com.google.android.material.circularreveal.CircularRevealLinearLayout>
