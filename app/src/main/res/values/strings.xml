@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">HEPA4ALL</string>
     <string name="login_prompt">Login to get started</string>
     <string name="email">Email</string>
     <string name="password">Password</string>

@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.CircularRevealLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".LoginActivity">
-
-    <!---Logo SVG-->
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/vgLoginLayout"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="24dp"
-        android:src="@drawable/ic_hepa4all_logo_monochrome"
-        android:tint="@color/colorSecondary" />
 
     <!---Login layout-->
     <com.google.android.material.circularreveal.CircularRevealLinearLayout
         android:id="@+id/vgLoginLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
+        android:layout_weight="2"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -82,7 +74,7 @@
 
         <!---Sign up sub-layout-->
         <com.google.android.material.circularreveal.CircularRevealRelativeLayout
-            android:layout_width="250dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:layout_marginTop="64dp"
@@ -111,4 +103,14 @@
 
     </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
-</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+    <!---Logo SVG-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="8"
+        android:src="@drawable/ic_hepa4all_logo_monochrome"
+        android:tint="@color/colorSecondary" />
+
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

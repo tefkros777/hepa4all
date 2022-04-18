@@ -9,7 +9,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         Log.d(LOG_TAG, "LoginActivity loaded")
-
     }
 
     fun login(view: android.view.View) {
