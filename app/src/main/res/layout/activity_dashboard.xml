@@ -1,9 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- GridLayout -->
+    <com.google.android.material.circularreveal.CircularRevealGridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="18dp"
+        android:rowCount="3">
+
+
+        <!--0,0-->
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/dustyBlue"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="fooooooo"
+                    android:textSize="24sp" />
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <!--0,1-->
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/dustyBlue"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="fooooooo"
+                    android:textSize="24sp" />
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <!--1,0-->
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/dustyBlue"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="fooooooo"
+                    android:textSize="24sp" />
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <!--1,1-->
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/dustyBlue"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="fooooooo"
+                    android:textSize="24sp" />
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <!--2,0-->
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="16dp" android:layout_columnSpan="2"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/dustyBlue"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="fooooooo"
+                    android:textSize="24sp" />
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+    </com.google.android.material.circularreveal.CircularRevealGridLayout>
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
