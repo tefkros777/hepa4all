@@ -27,7 +27,7 @@
             android:layout_marginBottom="18dp"
             android:gravity="center"
             android:text="@string/login_prompt"
-            android:textColor="@color/dustyBlue"
+            android:textColor="@color/colorPrimaryText"
             android:textSize="22sp" />
 
         <!---Email editText-->

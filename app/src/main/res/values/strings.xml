@@ -7,4 +7,9 @@
     <string name="no_account">Don\'t have an account?</string>
     <string name="signup">Signup</string>
     <string name="guest_login">Login as Guest</string>
+    <string name="stakeholders_dir">Stakeholders Directory</string>
+    <string name="individuals_dir">Individuals Directory</string>
+    <string name="organizations_dir">Organizations Directory</string>
+    <string name="hepa_course">HEPA4ALL Course</string>
+    <string name="activities_dir">Activities Directory</string>
 </resources>

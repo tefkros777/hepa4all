@@ -16,5 +16,6 @@
     <color name="sunrise">#DDB26A</color>
 
     <color name="colorPrimaryText">#ffffff</color>
-    <color name="colorSecondaryText">#BEFFFFFF</color>
+    <color name="colorSecondaryText">#EEFFFFFF</color>
+    <color name="colorSecondaryBackground">#C3D1D1D1</color>
 </resources>
