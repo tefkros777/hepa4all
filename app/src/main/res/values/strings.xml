@@ -18,4 +18,5 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="exit_promt">Do you really wish to exit?</string>
+    <string name="email_placeholder">jer_clarkson@bbc.co.uk</string>
 </resources>
