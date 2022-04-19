@@ -12,4 +12,10 @@
     <string name="organizations_dir">Organizations Directory</string>
     <string name="hepa_course">HEPA4ALL Course</string>
     <string name="activities_dir">Activities Directory</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="open_in_browser">Open in Browser</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="exit_promt">Do you really wish to exit?</string>
 </resources>

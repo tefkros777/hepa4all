@@ -1,257 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    tools:context=".DashboardActivity"
+    tools:openDrawer="start">
 
-    <!-- GridLayout -->
-    <com.google.android.material.circularreveal.CircularRevealGridLayout
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:padding="16dp"
-        android:rowCount="3">
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white"></androidx.appcompat.widget.Toolbar>
+
+        <!-- GridLayout -->
+        <com.google.android.material.circularreveal.CircularRevealGridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="16dp"
+            android:rowCount="3">
 
 
-        <!--0,0-->
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/cvStakeholders"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="16dp"
-            android:clickable="true"
-            android:onClick="btnStakeholdersDir"
-            app:cardBackgroundColor="@color/duskBlue"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="12dp">
-
-            <com.google.android.material.circularreveal.CircularRevealLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
+            <!--0,0-->
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cvStakeholders"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:weightSum="10">
+                android:clickable="true"
+                android:onClick="btnStakeholdersDir"
+                app:cardBackgroundColor="@color/duskBlue"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="12dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="6"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_stakeholders_directory" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:text="@string/stakeholders_dir"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
-
-
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <!--0,1-->
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/cvIndividuals"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="16dp"
-            android:clickable="true"
-            android:onClick="btnIndividualsDir"
-            app:cardBackgroundColor="@color/duskBlue"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="12dp">
-
-            <com.google.android.material.circularreveal.CircularRevealLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:weightSum="10">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="6"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_individuals_directory" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:text="@string/individuals_dir"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorSecondaryText"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
-
-
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <!--1,0-->
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/cvOrganizations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="16dp"
-            android:clickable="true"
-            android:onClick="btnOrganizationsDir"
-            app:cardBackgroundColor="@color/duskBlue"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="12dp">
-
-            <com.google.android.material.circularreveal.CircularRevealLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:weightSum="10">
-
-                <com.google.android.material.imageview.ShapeableImageView
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="6"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_organizations_directory" />
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:text="@string/organizations_dir"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorSecondaryText"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="6"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_stakeholders_directory" />
 
-            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/stakeholders_dir"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
 
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-        <!--1,1-->
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/cvHepaCourse"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="16dp"
-            android:clickable="true"
-            android:onClick="btnHepaCourse"
-            app:cardBackgroundColor="@color/duskBlue"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="12dp">
-
-            <com.google.android.material.circularreveal.CircularRevealLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
+            <!--0,1-->
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cvIndividuals"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:weightSum="10">
+                android:clickable="true"
+                android:onClick="btnIndividualsDir"
+                app:cardBackgroundColor="@color/duskBlue"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="12dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="6"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_courses_directory" />
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:text="@string/hepa_course"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorSecondaryText"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="6"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_individuals_directory" />
 
-            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/individuals_dir"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
 
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-        <!--2,0-->
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/cvActivities"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnSpan="2"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="26dp"
-            android:clickable="true"
-            android:onClick="btnActivitiesDir"
-            app:cardBackgroundColor="@color/duskBlue"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="6dp">
-
-            <com.google.android.material.circularreveal.CircularRevealLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal|center_vertical"
+            <!--1,0-->
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cvOrganizations"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:weightSum="10">
+                android:clickable="true"
+                android:onClick="btnOrganizationsDir"
+                app:cardBackgroundColor="@color/duskBlue"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="12dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="6"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_activities_directory" />
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
-                <com.google.android.material.textview.MaterialTextView
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="6"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_organizations_directory" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/organizations_dir"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+            <!--1,1-->
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cvHepaCourse"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:onClick="btnHepaCourse"
+                app:cardBackgroundColor="@color/duskBlue"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="12dp">
+
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:text="@string/activities_dir"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorSecondaryText"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
-            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="6"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_courses_directory" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/hepa_course"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
 
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+            <!--2,0-->
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cvActivities"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="26dp"
+                android:clickable="true"
+                android:onClick="btnActivitiesDir"
+                app:cardBackgroundColor="@color/duskBlue"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp">
+
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="6"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_activities_directory" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/activities_dir"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
 
-    </com.google.android.material.circularreveal.CircularRevealGridLayout>
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+        </com.google.android.material.circularreveal.CircularRevealGridLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clipToPadding="false"
+        app:menu="@menu/main_menu"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
