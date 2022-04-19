@@ -9,12 +9,11 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.textview.MaterialTextView
 
 class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var mAppbar: Toolbar
@@ -45,7 +44,7 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     }
 
-    fun btnStakeholdersDir(cv: MaterialCardView) {
+    fun btnStakeholdersDir(cv: CardView) {
         Log.d(LOG_TAG,"Stakeholders Directory Clicked")
     }
     fun btnIndividualsDir(cv: MaterialCardView) {
@@ -113,7 +112,8 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
             R.id.nav_item_about -> {
                 Log.d(LOG_TAG, "Navigation Drawer: About")
-                // Handle about Activity
+                val intent = Intent(this, AboutActivity::class.java)
+                startActivity(intent)
             }
         }
         mDrawer.closeDrawer(GravityCompat.START)

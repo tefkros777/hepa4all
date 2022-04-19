@@ -19,4 +19,13 @@
     <string name="close">Close</string>
     <string name="exit_promt">Do you really wish to exit?</string>
     <string name="email_placeholder">jer_clarkson@bbc.co.uk</string>
+    <string name="about_body">Description of the HEPA4ALL project</string>
+    <string name="credits">
+        This app makes use of the Android Material Icons Library licensed under the Apache Licence 2.0
+    </string>
+    <string name="app_version">Version</string>
+    <string name="developed_by">Developed by</string>
+    <string name="seit">SEIT Lab, Dept. of Computer Science</string>
+    <string name="dev_email">cloizo07@ucy.ac.cy</string>
+    <string name="ucy">University of Cyprus</string>
 </resources>
