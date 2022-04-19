@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
@@ -44,19 +45,19 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     }
 
-    fun btnStakeholdersDir(cv: CardView) {
+    fun btnStakeholdersDir(cv: View) {
         Log.d(LOG_TAG,"Stakeholders Directory Clicked")
     }
-    fun btnIndividualsDir(cv: MaterialCardView) {
+    fun btnIndividualsDir(cv: View) {
         Log.d(LOG_TAG,"Individuals Directory Clicked")
     }
-    fun btnOrganizationsDir(cv: MaterialCardView) {
+    fun btnOrganizationsDir(cv: View) {
         Log.d(LOG_TAG,"Organizations Directory Clicked")
     }
-    fun btnHepaCourse(cv: MaterialCardView) {
+    fun btnHepaCourse(cv: View) {
         Log.d(LOG_TAG,"HEPA4ALL Course Clicked")
     }
-    fun btnActivitiesDir(view: android.view.View) {
+    fun btnActivitiesDir(cv: View) {
         Log.d(LOG_TAG,"Activities Directory Clicked")
     }
 

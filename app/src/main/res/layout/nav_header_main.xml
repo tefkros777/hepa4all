@@ -19,12 +19,13 @@
         android:layout_height="0dp"
         android:layout_weight="8"
         android:src="@drawable/ic_hepa4all_logo_monochrome"
-        android:tint="@color/dawnBlue" />
+        android:tint="@color/dustyBlue" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/nav_header_email"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:layout_weight="2"
         android:text="@string/email_placeholder"
         android:textColor="@color/colorPrimaryText" />
