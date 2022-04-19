@@ -99,7 +99,17 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
             R.id.nav_item_logout -> {
                 Log.d(LOG_TAG, "Navigation Drawer: Logout")
-                // Handle logout request
+                val builder = AlertDialog.Builder(this)
+                    .setTitle(R.string.app_name)
+                    .setMessage(R.string.exit_promt)
+                    .setCancelable(false)
+                    .setPositiveButton("Yes") { dialog, id ->
+                        // Handle logout request
+                        finish()
+                        //TODO: Also need to handle firebase logout
+                    }
+                    .setNegativeButton("No") { dialog, id -> dialog.cancel() }
+                builder.create().show()
             }
             R.id.nav_item_about -> {
                 Log.d(LOG_TAG, "Navigation Drawer: About")

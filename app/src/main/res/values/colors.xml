@@ -10,7 +10,8 @@
 
 
     <color name="dustyBlue">#c9d6e7</color>
-    <color name="duskBlue">#1e4173</color>
+    <color name="duskBlue">#3D5678</color>
+    <color name="midnightBlue">#2F425C</color>
     <color name="dawnBlue">#8494b4</color>
     <color name="sunset">#CD983F</color>
     <color name="sunrise">#DDB26A</color>
