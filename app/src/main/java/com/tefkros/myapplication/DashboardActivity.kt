@@ -13,11 +13,13 @@ import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationView
 
 class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    private lateinit var mAppbar: Toolbar
+    private lateinit var mAppbar: MaterialToolbar
     private lateinit var mDrawer: DrawerLayout
     private lateinit var mToggle: ActionBarDrawerToggle
 
@@ -73,7 +75,7 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             mDrawer.closeDrawer(GravityCompat.START)
         } else {
         // If drawer is closed show app exit dialog
-            val builder = AlertDialog.Builder(this)
+            val builder = MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.exit_promt)
                 .setCancelable(false)
