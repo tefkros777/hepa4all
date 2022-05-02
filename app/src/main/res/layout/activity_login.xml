@@ -1,116 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.circularreveal.CircularRevealLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/duskBlue"
-    android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
-    <!---Login layout-->
     <com.google.android.material.circularreveal.CircularRevealLinearLayout
-        android:id="@+id/vgLoginLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:background="@color/duskBlue"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:context=".LoginActivity">
 
-        <!---Login prompt-->
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvLoginPrompt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:gravity="center"
-            android:text="@string/login_prompt"
-            android:textColor="@color/colorPrimaryText"
-            android:textSize="22sp" />
-
-        <!---Email editText-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:hint="@string/email"
-            android:textColor="@color/colorSecondaryText"
-            android:textColorHint="@color/colorSecondaryText" />
-
-        <!---Password editText-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColor="@color/colorSecondaryText"
-            android:textColorHint="@color/colorSecondaryText" />
-
-        <!---Login button-->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:backgroundTint="@color/sunset"
-            android:onClick="login"
-            android:text="@string/login" />
-
-        <!---Login button-->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGuestLogin"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+        <!---Login layout-->
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:id="@+id/vgLoginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:backgroundTint="@color/sunrise"
-            android:onClick="guestLogin"
-            android:text="@string/guest_login" />
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <!---Sign up sub-layout-->
-        <com.google.android.material.circularreveal.CircularRevealRelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginRight="6dp"
-            android:gravity="center">
-
+            <!---Login prompt-->
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvDontHaveAccount"
+                android:id="@+id/tvLoginPrompt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no_account"
-                android:textColor="@color/colorSecondaryText" />
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:text="@string/login_prompt"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="22sp" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvSignup"
-                android:layout_width="wrap_content"
+            <!---Email editText-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_toEndOf="@+id/tvDontHaveAccount"
-                android:onClick="signup"
-                android:text="@string/signup"
+                android:layout_margin="6dp"
+                android:hint="@string/email"
                 android:textColor="@color/colorSecondaryText"
-                android:textStyle="bold" />
+                android:textColorHint="@color/colorSecondaryText" />
 
-        </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+            <!---Password editText-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorSecondaryText"
+                android:textColorHint="@color/colorSecondaryText" />
+
+            <!---Login button-->
+
+            <!---Sign up sub-layout-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:backgroundTint="@color/sunrise"
+                android:onClick="login"
+                android:text="Login (testing)" />
+
+            <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginRight="6dp"
+                android:gravity="center">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDontHaveAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_account"
+                    android:textColor="@color/colorSecondaryText" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/tvDontHaveAccount"
+                    android:onClick="signup"
+                    android:text="@string/signup"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <!---Logo SVG-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="24dp"
+            android:layout_weight="8"
+            android:src="@drawable/ic_hepa4all_logo_monochrome"
+            android:tint="@color/dawnBlue" />
 
     </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
-    <!---Logo SVG-->
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/ivLogo"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="24dp"
-        android:layout_weight="8"
-        android:src="@drawable/ic_hepa4all_logo_monochrome"
-        android:tint="@color/dawnBlue" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="180dp"
+        android:visibility="invisible" />
 
-</com.google.android.material.circularreveal.CircularRevealLinearLayout>
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
