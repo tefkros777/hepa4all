@@ -2,6 +2,7 @@ package com.tefkros.myapplication
 
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -97,7 +98,8 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         when (item.itemId) {
             R.id.nav_item_open_in_browser -> {
                 Log.d(LOG_TAG, "Navigation Drawer: Open in browser")
-                // Handle open in browser
+                val intent = Intent (Intent.ACTION_VIEW, Uri.parse(HEPA_WEBSITE))
+                startActivity(intent)
             }
             R.id.nav_item_logout -> {
                 Log.d(LOG_TAG, "Navigation Drawer: Logout")
